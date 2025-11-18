@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkey Dash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        #gameContainer {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: #d2691e;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        canvas {
+            border: 3px solid #d2691e;
+            background: linear-gradient(to bottom, #87CEEB 0%, #f4a460 80%, #8b4513 100%);
+            display: block;
+            margin: 0 auto;
+        }
+        
+        #score, #gameOver {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        #gameOver {
+            display: none;
+            color: #d2691e;
+            font-size: 32px;
+        }
+        
+        #instructions {
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>🦃 Turkey Dash 🦃</h1>
+        <div id="score">Score: 0</div>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div id="gameOver">Game Over! Press SPACE to restart</div>
+        <div id="instructions">Press SPACEBAR to jump | Avoid obstacles!</div>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

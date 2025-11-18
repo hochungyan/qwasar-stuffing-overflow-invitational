@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanksgiving Game Lab - Project Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%);
+            color: #fff;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .game-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        .game-icon {
+            font-size: 4em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .game-card h2 {
+            color: #d2691e;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .game-card p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-badge {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: #666;
+        }
+        
+        .difficulty {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .stars {
+            color: #ffd700;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #d2691e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .btn:hover {
+            background: #a0522d;
+        }
+        
+        .btn-secondary {
+            background: #8b4513;
+        }
+        
+        .btn-secondary:hover {
+            background: #654321;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            width: calc((100% - 90px) / 4);
+            color: #333;
+        }
+        
+        .info-box h3 {
+            color: #d2691e;
+            margin-bottom: 15px;
+        }
+        
+        .info-box ol, .info-box ul {
+            margin-left: 25px;
+            line-height: 1.8;
+        }
+        
+        .info-box code {
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦃 Thanksgiving Game Lab 🍂</h1>
+            <p class="subtitle">Four hands-on game development projects for students</p>
+        </header>
+        
+        <div class="info-box">
+            <h3>🚀 Quick Start Instructions</h3>
+            <ol>
+                <li>Make sure you're running a local web server:
+                    <br><code>python3 -m http.server 8000</code>
+                    <br>or <code>npx http-server -p 8000</code>
+                </li>
+                <li>Click "Play Game" below to test each project</li>
+                <li>Click "View Instructions" to see the student README</li>
+                <li>Each game should run immediately without modification</li>
+                <li>Students will then customize according to the README</li>
+            </ol>
+        </div>
+        
+        <div class="games-grid">
+            <!-- Game 1: Turkey Tetris -->
+            <div class="game-card">
+                <div class="game-icon">🟧</div>
+                <h2>Turkey Tetris</h2>
+                <p>Reskin a classic Tetris clone with Thanksgiving-themed blocks, sounds, and special effects!</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML5 Canvas</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Audio API</span>
+                </div>
+                
+                <div class="difficulty">
+                    Difficulty: <span class="stars">⭐⭐☆☆☆</span>
+                </div>
+                
+                <div>
+                    <a href="turkey-tetris/index.html" class="btn">Play Game</a>
+                    <a href="turkey-tetris/README.md" class="btn btn-secondary">View Instructions</a>
+                </div>
+            </div>
+            
+            <!-- Game 2: Pumpkin Catapult -->
+            <div class="game-card">
+                <div class="game-icon">🎃</div>
+                <h2>Pumpkin Catapult</h2>
+                <p>Launch pumpkins at targets using physics-based projectile motion. Tune the gameplay to perfection!</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">p5.js</span>
+                    <span class="tech-badge">Physics</span>
+                    <span class="tech-badge">Collision Detection</span>
+                </div>
+                
+                <div class="difficulty">
+                    Difficulty: <span class="stars">⭐⭐⭐☆☆</span>
+                </div>
+                
+                <div>
+                    <a href="pumpkin-catapult/index.html" class="btn">Play Game</a>
+                    <a href="pumpkin-catapult/README.md" class="btn btn-secondary">View Instructions</a>
+                </div>
+            </div>
+            
+            <!-- Game 3: Turkey Dash -->
+            <div class="game-card">
+                <div class="game-icon">🦃</div>
+                <h2>Turkey Dash</h2>
+                <p>An endless runner where a turkey dodges Thanksgiving obstacles. Configure speed, gravity, and more!</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML5 Canvas</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Game Loop</span>
+                </div>
+                
+                <div class="difficulty">
+                    Difficulty: <span class="stars">⭐⭐⭐☆☆</span>
+                </div>
+                
+                <div>
+                    <a href="turkey-dash/index.html" class="btn">Play Game</a>
+                    <a href="turkey-dash/README.md" class="btn btn-secondary">View Instructions</a>
+                </div>
+            </div>
+            
+            <!-- Game 4: Escape the Stuffing -->
+            <div class="game-card">
+                <div class="game-icon">🏃</div>
+                <h2>Escape the Stuffing</h2>
+                <p>Navigate a procedurally generated maze before time runs out. Learn about algorithms and grid-based games!</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">p5.js</span>
+                    <span class="tech-badge">Procedural Gen</span>
+                    <span class="tech-badge">Algorithms</span>
+                </div>
+                
+                <div class="difficulty">
+                    Difficulty: <span class="stars">⭐⭐⭐⭐☆</span>
+                </div>
+                
+                <div>
+                    <a href="escape-stuffing/index.html" class="btn">Play Game</a>
+                    <a href="escape-stuffing/README.md" class="btn btn-secondary">View Instructions</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p></p>
+            <p style="margin-top: 10px;">Each project takes ~1 hour to complete</p>
+        </footer>
+    </div>
+</body>
+</html>

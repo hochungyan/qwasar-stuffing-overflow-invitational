@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape the Stuffing</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #8B4513 0%, #D2691E 100%);
+            font-family: Arial, sans-serif;
+        }
+        
+        main {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: #8B4513;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        #instructions {
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .hud {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .timer {
+            color: #d2691e;
+        }
+    </style>
+</head>
+<body>
+    <main id="game-container">
+        <h1>🦃 Escape the Stuffing! 🦃</h1>
+        <div id="instructions">Use ARROW KEYS to navigate the maze before time runs out!</div>
+    </main>
+    <script src="maze.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
